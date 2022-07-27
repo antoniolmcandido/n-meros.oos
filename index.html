@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Número.oo(s)</title>
 </head>
 <body>
     <header>
-         <div class="header-texto">
+        <div class="header-texto">
             <p>Selecione uma disciplina:</p>
         </div>
         <nav>
@@ -29,7 +29,7 @@
     <main>
         <section class="main-title">
             <h1>Número.oo(s)</h1>
-            <p>A seguir você encontrará um problema de matemática. Leia atentamente e responda preenchendo o campo abaixo e clicando no botão. Você terá 3 chances.</p>
+            <p>A seguir você encontrará um problema de matemática. Leia atentamente e responda preenchendo o campo abaixo e clicando no botão. Você terá 6 chances.</p>
         </section>
         <section class="main-challenge">
             <div class="problema">
@@ -37,8 +37,9 @@
             </div>
             <div class="resposta">
                 <form class="campo-resposta">
-                    <input type="text" placeholder="insira aqui sua resposta">
-                    <input type="submit" value="enviar">
+                    <p>Resposta:</p>
+                    <input type="text" id="respostaInserir" placeholder="insira aqui sua resposta">
+                    <input type="submit" id="botaoEnviar" value="enviar">
                 </form>
             </div>
             <div class="tentativas">
@@ -46,16 +47,16 @@
              </div>    
         </section>
         <section class="main-solucao">
-            <div class="campo-resultado">
-                <p>Opção de texto A: Você acertou, parabéns!!!</p>
-                <p>Opção de texto B: Que pena, você não acetou. A resposta era ...</p>
+            <div class="campo-resultado" hidden>
+                <p>Você acertou, parabéns!!!</p>
+                <p>Que pena, você não acetou. A resposta era ...</p>
             </div>
-            <div class="complemento">
+            <div class="complemento" hidden>
                 <p>Se você gostou do tema, conheça um pouco mais em ...</p>
             </div>
         </section>
     </main>
-     <footer>
+    <footer>
         <p>Esse projeto foi desenvolvido por: 
             Ana Luiza de Mesquita Sampaio (links relacionados),
             André Junqueira Gasparin (links relacionados),
@@ -65,6 +66,6 @@
             como parte da Hackthon de encerramento da 1a turma da Tech Academy da StartSe
         </p>
     </footer>
-   <script src="main.js"></script> 
+    <script src="main.js"></script>
 </body>
 </html>
