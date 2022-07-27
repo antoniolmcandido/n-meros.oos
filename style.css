@@ -151,8 +151,9 @@ main {
     font-size: 20px;
     font-weight: 600;
 }
-#lampadas{
-    margin-top: 20px;
+.lampadas{
+    margin-top: 25px;
+    width: 35px;
 }
 .main-solucao{
     width: 600px;
