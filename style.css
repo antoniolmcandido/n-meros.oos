@@ -71,13 +71,6 @@ main {
     padding-top: 10px;
     margin-top: 25px;
 }
-.span{
-    text-shadow: 1px 1px 4px #783f04;
-    font-size: 15px;
-}
-.span a{
-    text-decoration: none;
-}
 .main-title p {
     display: flex;
     text-align: justify;
