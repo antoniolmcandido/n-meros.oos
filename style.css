@@ -59,8 +59,8 @@ header nav ul li a:hover {
 /*MAIN*/
 main {
     color: white;
-    margin-bottom: 100px;  
-    margin-left: 30px;  
+    margin-left: 30px; 
+    width: 600px;
 }
 .main-title h1 {
     text-transform: lowercase;
@@ -88,6 +88,7 @@ main {
     color: #e69138;
     box-shadow: 2px 2px 4px #783f04;
     border-radius: 20px;
+    width: 100%;
     max-width: 600px;
     min-width: 300px;
     min-height: 200px;
@@ -99,12 +100,32 @@ main {
 .problema h2 {
     font-size: 20px;
     font-weight: 700;
+    padding: 20px 0px 0px 20px;
+}
+.problema p{
+    font-size: 16px;
+    line-height: 25px;
+    padding: 20px 20px;
 }
 .resposta {
     margin: 20px;
     max-width: 600px;
 }
+
+.resposta input[type=number]{
+    height: 50px;
+    padding:0px 20px;
+    text-align: center;
+    width: 49%;
+}
+
+.resposta input[type=button]{
+    height: 50px;
+    width: 49%;
+}
+
 .resposta p{
+    width: 25%;
     text-shadow: 1px 1px 4px #783f04;
     font-weight: 700;
     font-size: 20px;
@@ -113,9 +134,9 @@ main {
     display: flex;
     align-items:flex-end;
     justify-content:space-between;
-    max-width: 550px;
-    margin-right: 20px;
+    max-width: 600px;
 }
+
 #respostaInserir {
     border:none;
     box-shadow: 2px 2px 4px #783f04;
@@ -128,14 +149,15 @@ main {
     border-color: #e69138;
     color:white;
     background-color: #e69138;
-    box-shadow: 2px 2px 4px #783f04;
+    box-shadow: 2px 2px 4px rgba(120,63,4,0.5);
     border-radius: 5px;
     border-width: 1px;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     padding: 5px; 
     min-width: 100px;
     min-height: 30px;
+    text-transform: uppercase;
 }
 #botaoEnviar:hover {
     background-color: white;
@@ -147,9 +169,10 @@ main {
 .tentativas{
     color: white;
     text-shadow: 1px 1px 4px #783f04;
-    margin: 50px 20px;
+    margin: 0px 20px;
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
 }
 .lampadas{
     margin-top: 25px;
@@ -161,11 +184,40 @@ main {
 }
 .campo-resultado{
     color: white;
-    text-shadow: 1px 1px 4px #783f04;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     font-size: 25px;
     margin-bottom: 30px;
     font-weight: 700;
 }
+
+#acertou, #errou, #resposta-final, .complemento{
+    display: none;
+}
+
+#acertou{
+    background-color: lightgreen;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    border-radius: 20px;
+}
+
+#errou{
+    background-color: lightcoral;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    border-radius: 20px;
+}
+
+#resposta-final{
+    background-color: lightgray;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    border-radius: 20px;
+}
+
 .complemento{
     text-shadow: 1px 1px 4px #783f04;
     color: white;
@@ -176,13 +228,61 @@ main {
 footer {
     color: white;
     text-align: justify;
-    max-width: 650px;
-    margin-top: 100px;
-    margin-left: 30px;
-    margin-right: 30px;
+    max-width: 600px;
+    margin: 0px 30px 30px 30px;
     padding-bottom: 30px;
     font-size: 13px;
-    font-weight: 500;   
+    font-weight: 500; 
+}
+
+footer h3{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    background-color: #e69138;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+footer ul{
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:25px;
+}
+
+footer ul li{
+    height: 30px;
+    margin-left: 20px;
+    list-style: none;
+    padding: 2px 0px;
+    line-height: 50px;
+    
+}
+
+
+footer ul li a{
+    text-decoration: none;
+    color: #666666;
+    font-size: 12px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+footer ul li a:hover{
+    background-color: #f0f0f0;
+}
+
+footer img{
+    width: 12px;
+    height: 12px;
+    margin: 0px 0px -2px 0px;
 }
 
 
