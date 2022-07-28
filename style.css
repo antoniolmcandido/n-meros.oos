@@ -162,6 +162,7 @@ main {
 #botaoEnviar:hover {
     background-color: white;
     border-color: white;
+    box-shadow: 2px 2px 4px rgba(120,63,4,0.5);
     color:#e69138;
     cursor: pointer;
     font-weight: 600;
