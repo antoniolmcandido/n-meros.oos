@@ -79,6 +79,9 @@ main {
     width: 20px;
     height: 20px;
 }
+.span a{
+    text-decoration: none;
+}
 .main-title p {
     display: flex;
     text-align: justify;
