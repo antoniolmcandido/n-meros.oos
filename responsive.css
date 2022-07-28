@@ -1,0 +1,51 @@
+@media (max-width: 1000px) {
+    header {
+        height: 44px;
+    }
+    .disciplinas {
+        max-width: 1000px;
+        margin-top: 11px;
+        
+    }
+    .header-texto {
+        display: flex;
+        flex-direction: column;
+        max-width: 1000px;           
+    }
+    .header-texto p {
+        display:none;
+    }
+    
+}
+@media (max-width: 750px) {
+    /*HEADER-750px*/
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        padding-bottom: 93px;
+        margin-bottom: 0;
+    }
+    .header-texto {
+        max-width: 630px;           
+    }
+    .disciplinas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 21px;
+        font-size: 125%;          
+    }
+    header nav ul li a:hover {
+        height: 20px;       
+    }
+    
+    /*RESPOSTA 750px*/
+    .campo-resposta {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+}
