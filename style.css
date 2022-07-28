@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Yanone+Kaffeesatz:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+html, body {
+    font-family: "Rubik", 'Times New Roman';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f9c47cff;
+    background-repeat: no-repeat;
+    background-image: url("https://live.staticflickr.com/65535/50251693221_c691fe9dfa_b.jpg");
+    background-size: cover;
+} 
+/*HEADER*/
+header{
+    background-color:white;
+    height: 44px;
+}
+.disciplinas {
+    margin-top: -29px;
+}
+.header-texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin: auto;
+    max-width: 980px;
+    height: 80px;
+}
+.header-texto p{
+    display: flex;
+    align-items: center;
+    color: #e69138;
+    height: 60px;    
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: -37px;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e69138;
+    font-size: 12px;
+    padding: 15px;
+    transition: all 250ms linear 0s;
+    font-weight: 500;
+}
+header nav ul li a:hover {
+    background-color:#e69138;
+    color: white;
+    cursor: pointer;
+}
+/*MAIN*/
+main {
+    color: white;
+    margin-left: 30px;
+    max-width: 600px;
+}
+.main-title h1 {
+    text-transform: lowercase;
+    text-shadow: 1px 1px 4px #783f04;
+    font-weight: 700;
+    font-size: 35px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-top: 25px;
+}
+.main-title p {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    text-shadow: 1px 1px 4px #783f04;
+    font-weight: 500;
+    font-size: 17px;
+    padding-bottom: 10px;
+    max-width: 600px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.problema {
+    background-color: white;
+    color: #e69138;
+    box-shadow: 1px 1px 4px #783f04;
+    border-radius: 20px;
+    max-width: 100%;
+    min-width: 300px;
+    min-height: 200px;
+    margin-right:30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.problema h2 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0px 0px 10px;
+}
+.problema p{
+    font-size: 16px;
+    line-height: 25px;
+    padding: 20px 20px;
+}
+.resposta {
+    margin:20px 20px 20px 0px;
+    max-width: 600px;
+}
+
+.resposta input[type=number]{
+    height: 50px;
+    padding:0px 20px;
+    text-align: center;
+    width: 49%;
+}
+
+.resposta input[type=button]{
+    height: 50px;
+    width: 49%;
+}
+
+.campo-resposta {
+    display: flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    max-width: 570px;
+}
+
+#respostaInserir {
+    border:none;
+    box-shadow: 1px 1px 4px #783f04;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    min-height: 30px; 
+}
+#botaoEnviar {
+    border-color: #e69138;
+    color:white;
+    background-color: #e69138;
+    box-shadow: 1px 1px 4px #783f04;
+    border-radius: 5px;
+    border-width: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px; 
+    min-width: 100px;
+    min-height: 30px;
+    text-transform: uppercase;
+}
+#botaoEnviar:hover {
+    background-color: white;
+    border-color: white;
+    box-shadow: 1px 1px 4px rgba(120,63,4,0.5);
+    color:#e69138;
+    cursor: pointer;
+    font-weight: 600;
+}
+.tentativas{
+    color: white;
+    text-shadow: 1px 1px 4px #783f04;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.lampadas{
+    margin-top: 25px;
+    width: 40px;
+}
+.main-solucao{
+    max-width: 500;
+    margin: 10px 0;
+}
+.campo-resultado{
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#acertou, #errou, #resposta-final, .complemento{
+    display: none;
+}
+
+#acertou{
+    background-color: lightgreen;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0px 30px 10px 0px;
+    border-radius: 20px;
+    max-width:570px;
+}
+
+#errou{
+    background-color: lightcoral;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0px 30px 10px 0px;
+    border-radius: 20px;
+    max-width:570px;
+}
+
+#resposta-final{
+    background-color: lightgray;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0px 30px 10px 0px;
+    border-radius: 20px;
+    max-width:570px;
+}
+
+.complemento{
+    text-shadow: 1px 1px 4px #783f04;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+/*FOOTER*/
+footer {
+    color: white;
+    text-align: justify;
+    max-width: 570px;
+    margin: 50px 30px 20px 30px;
+    padding-bottom: 30px;
+    font-size: 13px;
+    font-weight: 500; 
+}
+
+footer h3{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    background-color: #e69138;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+footer ul{
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:25px;
+}
+
+footer ul li{
+    height: 30px;
+    margin-left: 20px;
+    list-style: none;
+    padding: 2px 0px;
+    line-height: 50px;
+    
+}
+
+
+footer ul li a{
+    text-decoration: none;
+    color: #666666;
+    font-size: 12px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+footer ul li a:hover{
+    background-color: #f0f0f0;
+}
+
+footer img{
+    width: 12px;
+    height: 12px;
+    margin: 0px 0px -2px 0px;
+}
