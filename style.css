@@ -8,7 +8,7 @@
 html, body {
     font-family: "Rubik", 'Times New Roman';
     text-rendering: optimizeLegibility;
-    
+    -webkit-font-smoothing: antialiased;
     background-color: #f9c47cff;
     background-repeat: no-repeat;
     background-image: url("https://live.staticflickr.com/65535/50251693221_c691fe9dfa_b.jpg");
