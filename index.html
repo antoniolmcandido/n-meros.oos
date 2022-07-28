@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <title>Número.oo(s)</title>
+    <title>Númer.ooo(s)</title>
 </head>
-<body>
+<body onload="configGame()">
     <header>
         <div class="header-texto">
             <p>Selecione uma disciplina:</p>
@@ -29,31 +29,37 @@
     </header>
     <main>
         <section class="main-title">
-            <h1>Número.oo(s)</h1>
-            <p>A seguir você encontrará um problema de matemática. Leia atentamente e responda preenchendo o campo abaixo e clicando no botão. Você terá 3 chances.</p>
+            <h1>Númer.ooo(s)</h1>
+            <p>A seguir você encontrará um problema de matemática.<br><br>
+                Leia atentamente o desafio do dia, responda preenchendo o campo abaixo e clicando no botão.<br><br>
+                Você terá 3 chances.</p>
         </section>
         <section class="main-challenge">
             <div class="problema">
-                <h2>PROBLEMA</h2>
-            </div>
-            <div class="resposta">
-                <form class="campo-resposta">
-                    <p>Resposta:</p>
-                    <input type="number" id="respostaInserir" placeholder="insira aqui sua resposta">
-                    <input type="submit" id="botaoEnviar" value="enviar">
-                </form>
+                <h2>DESAFIO DE HOJE:</h2>
+                <p id="desafio"></p>
             </div>
             <div class="tentativas">
-                <p>Restam ... tentativas.</p>
-                <span><img class="lampadas" src="./lightbulb-png-830.png" alt="lâmpada"></span>
-                <span><img class="lampadas" src="./lightbulb-png-830.png" alt="lâmpada"></span>
-                <span><img class="lampadas" src="./lightbulb-png-830.png" alt="lâmpada"></span>
-             </div>    
+                <p>
+                    Restam <span id="tentativas"></span> tentativas: 
+                    <span>💡</span>
+                    <span>💡</span>
+                    <span>💡</span>
+                </p>
+             </div> 
+            <div class="resposta">
+                <form class="campo-resposta">
+                    <input type="number" id="respostaInserir" placeholder="insira aqui sua resposta">
+                    <input type="button" id="botaoEnviar" value="enviar" onclick="enviaResposta()">
+                </form>
+            </div>
+               
         </section>
         <section class="main-solucao">
             <div class="campo-resultado">
-                <p>Você acertou, parabéns!!!</p>
-                <p>Que pena, você não acertou. A resposta era ...</p>
+                <p id="acertou">Você acertou! Parabéns!</p>
+                <p id="errou">Que pena, você não acertou.</p>
+                <p id="resposta-final">A resposta é: <span id="resposta"></span></p>
             </div>
             <div class="complemento">
                 <p>Se você gostou do tema, conheça um pouco mais em ...</p>
@@ -61,15 +67,16 @@
         </section>
     </main>
     <footer>
-        <p>Esse projeto foi desenvolvido por: 
-            Ana Luiza de Mesquita Sampaio (links relacionados),
-            André Junqueira Gasparin (links relacionados),
-            Antonio Leandro Martins Candido (links relacionados),
-            Jordan Ferraz Paiva Souto (links relacionados) e
-            Pollyana Eidelwein (links relacionados)
-            como parte da Hackthon de encerramento da 1a turma da Tech Academy da StartSe
-        </p>
+        <h3>Esse projeto fez parte da Hackthon de encerramento da 1ª turma da<br>Tech Academy da StartSe e foi desenvolvido por:</h3>
+        <ul>
+            <li><a href="#">Ana Luiza Sampaio <img src="./images/linkedin-logo.png" /></a></li>
+            <li><a href="#">André  Gasparin <img src="./images/linkedin-logo.png" /></a></li>
+            <li><a href="#">Antonio Candido <img src="./images/linkedin-logo.png" /></a></li>
+            <li><a href="#">Jordan Ferraz <img src="./images/linkedin-logo.png" /></a></li>
+            <li><a href="#">Pollyana Eidelwein <img src="./images/linkedin-logo.png" /></a></li>
+        </ul>
     </footer>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
