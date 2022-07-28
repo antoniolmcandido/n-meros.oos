@@ -34,11 +34,11 @@ header{
 .header-texto p{
     display: flex;
     align-items: center;
-    background-color:white;
     color: #e69138;
     height: 60px;    
     font-size: 0.9em;
     font-weight: 600;
+    margin-top: -37px;
 }
 header nav ul{
     display: flex;
@@ -63,8 +63,8 @@ header nav ul li a:hover {
 /*MAIN*/
 main {
     color: white;
-    margin-left: 30px; 
-    width: 600px;
+    margin-left: 30px;
+    max-width: 600px;
 }
 .main-title h1 {
     text-transform: lowercase;
@@ -74,13 +74,6 @@ main {
     padding-bottom: 15px;
     padding-top: 10px;
     margin-top: 25px;
-}
-.span{
-    text-shadow: 1px 1px 4px #783f04;
-    font-size: 15px;
-}
-.span a{
-    text-decoration: none;
 }
 .main-title p {
     display: flex;
@@ -97,10 +90,9 @@ main {
 .problema {
     background-color: white;
     color: #e69138;
-    box-shadow: 2px 2px 4px #783f04;
+    box-shadow: 1px 1px 4px #783f04;
     border-radius: 20px;
-    width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     min-width: 300px;
     min-height: 200px;
     margin-right:30px;
@@ -111,7 +103,7 @@ main {
 .problema h2 {
     font-size: 20px;
     font-weight: 700;
-    padding: 20px 0px 0px 20px;
+    padding: 10px 0px 0px 10px;
 }
 .problema p{
     font-size: 16px;
@@ -134,16 +126,17 @@ main {
     height: 50px;
     width: 49%;
 }
+
 .campo-resposta {
     display: flex;
     align-items:flex-end;
     justify-content:space-between;
-    max-width: 600px;
+    max-width: 570px;
 }
 
 #respostaInserir {
     border:none;
-    box-shadow: 2px 2px 4px #783f04;
+    box-shadow: 1px 1px 4px #783f04;
     border-radius: 5px;
     font-size: 15px;
     padding: 5px;
@@ -153,7 +146,7 @@ main {
     border-color: #e69138;
     color:white;
     background-color: #e69138;
-    box-shadow: 2px 2px 4px #783f04;
+    box-shadow: 1px 1px 4px #783f04;
     border-radius: 5px;
     border-width: 1px;
     font-size: 13px;
@@ -166,7 +159,7 @@ main {
 #botaoEnviar:hover {
     background-color: white;
     border-color: white;
-    box-shadow: 2px 2px 4px rgba(120,63,4,0.5);
+    box-shadow: 1px 1px 4px rgba(120,63,4,0.5);
     color:#e69138;
     cursor: pointer;
     font-weight: 600;
@@ -174,7 +167,6 @@ main {
 .tentativas{
     color: white;
     text-shadow: 1px 1px 4px #783f04;
-    margin: 0px 20px;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
@@ -184,7 +176,7 @@ main {
     width: 40px;
 }
 .main-solucao{
-    width: 600px;
+    max-width: 500;
     margin: 10px 0;
 }
 .campo-resultado{
@@ -203,7 +195,7 @@ main {
     background-color: lightgreen;
     padding: 20px 30px;
     text-align: center;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 30px 10px 0px;
     border-radius: 20px;
     max-width:570px;
 }
@@ -212,7 +204,7 @@ main {
     background-color: lightcoral;
     padding: 20px 30px;
     text-align: center;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 30px 10px 0px;
     border-radius: 20px;
     max-width:570px;
 }
@@ -221,7 +213,7 @@ main {
     background-color: lightgray;
     padding: 20px 30px;
     text-align: center;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 30px 10px 0px;
     border-radius: 20px;
     max-width:570px;
 }
@@ -236,8 +228,8 @@ main {
 footer {
     color: white;
     text-align: justify;
-    max-width: 600px;
-    margin: 0px 30px 30px 30px;
+    max-width: 570px;
+    margin: 50px 30px 20px 30px;
     padding-bottom: 30px;
     font-size: 13px;
     font-weight: 500; 
@@ -292,5 +284,3 @@ footer img{
     height: 12px;
     margin: 0px 0px -2px 0px;
 }
-
-
