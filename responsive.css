@@ -18,16 +18,12 @@
     
 }
 @media (max-width: 750px) {
-    /*HEADER-750px*/
     header {
         display: flex;
         flex-wrap: wrap;
         justify-content:space-between;
         padding-bottom: 93px;
         margin-bottom: 0;
-    }
-    .header-texto {
-        max-width: 630px;           
     }
     .disciplinas {
         display: flex;
@@ -41,11 +37,50 @@
         height: 20px;       
     }
     
-    /*RESPOSTA 750px*/
     .campo-resposta {
         align-items: center;
         flex-direction: column;
         gap: 20px;
     }
-    
+}
+@media (max-width: 540px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        padding-bottom: 138px;
+        margin-bottom: 0;
+    }
+    .header-texto {
+        max-width: 630px;           
+    }
+    .disciplinas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 21px;
+        font-size: 125%;          
+    }
+    header nav ul li a{
+        font-size: 15px;
+    }
+    header nav ul li a:hover {
+        height: 20px;       
+    }
+    #desafio {
+        font-size:17px;
+    }
+    #respostaInserir {
+        font-size: 15px;
+    }
+    #botaoEnviar {
+        font-size: 15px;
+    }
+    footer ul {
+        flex-direction:column;
+    }
+    footer ul li a {
+        font-size:15px;        
+    }
 }
