@@ -7,25 +7,6 @@ let resolucao;
 let erro;
 let tentativas;
 
-/* CONFIG GERAL */
-
-function configGame() {
-    // Recuperando do cache
-    if (localStorage.getItem("tentativas") !== null){
-        tentativas = parseInt(localStorage.getItem("tentativas"));
-    } else {
-        tentativas = 3;
-    }    
-    document.getElementById('tentativas').innerHTML = tentativas;
-    
-    // Recuperando do cache ~ 1
-    if (localStorage.getItem("erro") !== null){
-        erro = parseInt(localStorage.getItem("erro"));
-    } else {
-        erro = 1;
-    }
-}
-
 /* CONFIG DATA */
 
 let today = new Date();
@@ -58,6 +39,41 @@ d3.csv("./desafios.csv", function (data) {
     }
 });
 
+/* CONFIG GERAL */
+
+function configGame() {
+    // Recuperando do cache
+    if (localStorage.getItem("tentativas") !== null){
+        tentativas = parseInt(localStorage.getItem("tentativas"));
+    } else {
+        tentativas = 3;
+    }    
+    document.getElementById('tentativas').innerHTML = tentativas;
+
+    if (tentativas === -1) {
+        document.getElementById('resposta').innerHTML = resposta;
+        document.getElementById('acertou').style.display = 'block';
+        document.getElementById('resposta-final').style.display = 'block';
+        document.getElementById('resolucao-resposta').innerHTML = resolucao;
+        document.getElementById('resolucao').style.display = 'block';
+        document.getElementById('resposta-box').style.display = 'none';
+        document.getElementById('tentativa-box').style.display = 'none';
+    }
+
+    if (tentativas === 0) {
+        document.getElementById('resposta').innerHTML = resposta;
+        document.getElementById('errou').style.display = 'block';
+        document.getElementById('resposta-final').style.display = 'block';
+        document.getElementById('resolucao-resposta').innerHTML = resolucao;
+        document.getElementById('resolucao').style.display = 'block';
+        document.getElementById('tentativas').innerHTML = document.getElementById('tentativas').textContent = 0;
+        document.getElementById('resposta-box').style.display = 'none';
+        document.getElementById('tentativa-box').style.display = 'none';
+    }   
+    
+    erro = 1;
+}
+
 /* TESTA A RESPOSTA */
 
 function enviaResposta() {
@@ -75,6 +91,9 @@ function enviaResposta() {
             document.getElementById('qtd-tentativas').innerHTML = `de primeira`;
         }
 
+        // Guardando no cache
+        localStorage.setItem("tentativas", "-1"); 
+
     } else {
         if (tentativas < 2) {
             document.getElementById('resposta').innerHTML = resposta;
@@ -85,6 +104,9 @@ function enviaResposta() {
             document.getElementById('tentativas').innerHTML = document.getElementById('tentativas').textContent = 0;
             document.getElementById('resposta-box').style.display = 'none';
             document.getElementById('tentativa-box').style.display = 'none';
+
+            // Guardando no cache
+            localStorage.setItem("tentativas", "0"); 
         } else {
             tentativas--;
             document.getElementById('lamp' + erro).style.display = 'none';
@@ -92,8 +114,7 @@ function enviaResposta() {
             document.getElementById('tentativas').innerHTML = document.getElementById('tentativas').textContent = tentativas;
             
             // Guardando no cache
-            localStorage.setItem("tentativas", tentativas.toString());
-            localStorage.setItem("erro", erro.toString());
+            localStorage.setItem("tentativas", tentativas.toString());            
         }
     }
 }
@@ -116,7 +137,6 @@ function shareErrou() {
 
 function showInfo() {
     document.getElementById('como-funciona').style.display = 'block';
-
 }
 
 function hideInfo() {
